@@ -7,16 +7,18 @@ var tbody = d3.select("tbody");
 function buildTable(data) {
     // this clears existing table
     tbody.html("");
-}
 
 //for each loops
-data.forEach((dataRow) => {
-    let row = tbody.append("tr");
-    Object.values(dataRow).forEach((val) => {
-        let cell = row.append("td");
-        cell.text(val);
+    data.forEach((dataRow) => {
+        let row = tbody.append("tr");
+        Object.values(dataRow).forEach((val) => {
+            let cell = row.append("td");
+            cell.text(val);
+            }
+        );
     });
-});
+}
+
 
 function handleClick() {
     //grab datetime value form filter. Def variable
